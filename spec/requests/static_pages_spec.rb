@@ -3,26 +3,32 @@ require 'spec_helper'
 describe "StaticPages" do
   
   describe "Home page" do
+    before { visit root_path }
 
     it "should have the content 'Home'" do
-      visit '/static_pages/home'
-      expect(page).to have_content('Home')
+      expect(page).to have_title('| Home')
+      expect(page).to have_link('Help')
+      expect(page).to have_link('About')
     end
   end
 
   describe "Help page" do
+    before { visit help_path }
 
   	it "should have the content 'Help'" do
-    	visit '/static_pages/help'
-    	expect(page).to have_content('Help')
+    	expect(page).to have_title('| Help')
+      expect(page).to have_link('Home')
+      expect(page).to have_link('About')
     end
   end
 
   describe "About page" do
+    before { visit about_path }
 
   	it "should have the content 'About'" do
-  		visit '/static_pages/about'
-  		expect(page).to have_content('About')
+  		expect(page).to have_title('| About')
+      expect(page).to have_link('Home')
+      expect(page).to have_link('Help')
   	end
   end
 end
