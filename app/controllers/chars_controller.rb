@@ -9,4 +9,8 @@ class CharsController < ApplicationController
   def index
   	Char.find(:all)
   end
+
+  def update
+  	redirect_to root
+  end
 end

@@ -1,7 +1,15 @@
 <% provide(:title, 'Home')%>
+<% flash[:alert] = "Attacked successfully for 10 damage!" %>
 
 <h1>Home</h1>
 <p>Welcome to Battle!</p>
+<b>
+	<div>
+		<%= render 'chars/player_char' %><%= render 'chars/opponent_char' %>
+	</div>
+	<div class="alert"><%= flash[:alert] %></div>
+	<h4><%= button_to "Aggressive", "" %><%= button_to "Defensive", "" %><h4>
+</b>
 <ul>
 	<li><%= link_to "Help", help_path %></li>
 	<li><%= link_to "About", about_path %></li>

@@ -11,3 +11,37 @@
  *= require_self
  *= require_tree .
  */
+# site
+/*
+.container
+{
+	text-align:center;
+}
+.alert
+{
+	text-align:center;
+	color:red;
+	height:20px;
+	min-width:100px;
+	background-color:#111;
+}
+
+h1
+{
+	text-align:center;
+	font-size:40px;
+}
+p
+{
+	text-align:center;
+	font-size:30px;
+	font-style:bold;
+}
+h2
+{
+	text-align:center;
+	color:#FFF;
+	height:auto;
+	background-color:#111;
+}
+*/

@@ -1,3 +1,13 @@
 class Char < ActiveRecord::Base
-	#attr_accessor :name, :strength, :defense, :health, :maxhealth
+	def roll
+		@attack = strength + rand(10)
+	end
+
+	def alive?
+		if (health > 0)
+			true
+		else
+			false
+		end
+	end
 end

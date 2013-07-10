@@ -1,5 +1,4 @@
 Battleweb::Application.routes.draw do
-  get "chars/new"
   resources :chars
   root 'static_pages#home'
   match '/help',    to: 'static_pages#help',    via: 'get'
