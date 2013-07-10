@@ -8,7 +8,10 @@
 		<%= render 'chars/player_char' %><%= render 'chars/opponent_char' %>
 	</div>
 	<div class="alert"><%= flash[:alert] %></div>
-	<h4><%= button_to "Aggressive", "" %><%= button_to "Defensive", "" %><h4>
+	<h4>
+		<%= button_to "Aggressive", chars_path %>
+		<%= button_to "Defensive", chars_path %>
+	<h4>
 </b>
 <ul>
 	<li><%= link_to "Help", help_path %></li>
